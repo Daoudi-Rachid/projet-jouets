@@ -1,9 +1,14 @@
 const express = require("express")
 const Jouet = require("../models/jouet")
 const mongoose = require("../connection")
-const app = express()
+const jouetRouter = require("./routers/jouets")
 
 const port = 3000
 
-app.get("/")
+const app = express()
+
+// app.use(express.json()) 
+app.use(jouetRouter)
+
+app.listen(port)
 
