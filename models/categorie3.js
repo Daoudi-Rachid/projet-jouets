@@ -35,6 +35,6 @@ const jouetSchema = new mongoose.Schema({
     // }
 })
 
-const categorie = mongoose.model("categorie1", jouetSchema)
+const categorie = mongoose.model("categorie3", jouetSchema)
 
 module.exports = categorie

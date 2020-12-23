@@ -9,7 +9,7 @@ router.post("/users", async (req, res) => {
         const document = await newUser.save()
         res.status(201).json(document)
     } catch {
-        res.status(500).send("Erreur lors de l'utilisateur")
+        res.status(500).send("Erreur lors de l'ajout de l'utilisateur")
     }
 })
 
