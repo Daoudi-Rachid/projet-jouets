@@ -1,17 +1,17 @@
 const express = require("express")
+// const mongoose = require("mongoose")
 const Categorie1 = require("../../models/categorie1")
-const mongoose = require("mongoose")
 const connection = require("../../connection")
 
 const router = new express.Router()
 
-router.get("/", async (req, res) => {
+router.get("/getJouetsCat1", async (req, res) => {
     const jouet = new Categorie1(req.body)
     jouet.collection
     .find()
     .toArray()
-    .then(result => console.log(result))
-     .catch(error => console.log("Erreur sur le find()"))    
+    .then(result => res.send(result))
+    .catch(error => console.log("Erreur sur le find()"))    
 })
 
 // Méthode 1: ajouter un jouet avec mongoDB Compass

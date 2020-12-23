@@ -29,10 +29,10 @@ const jouetSchema = new mongoose.Schema({
         type: Number,
         required: false,
     },
-    categorie: {
-        type: Number,
-        required: false,
-    }
+    // categorie: {
+    //     type: Number,
+    //     required: false,
+    // }
 })
 
 const categorieone = mongoose.model("categorieone", jouetSchema)
